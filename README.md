@@ -20,6 +20,11 @@ Steps to run the example localy:
   2. Run sample_code.py
      *                      train_rr_ref, test_rr_ref, train_sig_raw, test_sig_raw, train_activity_id, test_activity_id = load_data()*              
        - This line will import the data and create the data for training and testing phase
+      
+         
+      *                     train_dataset, test_dataset = create_datasets(train_sig_raw, train_rr_ref, test_sig_raw, test_rr_ref)*              
+       - Create the tensor files for feeding the model
+    
      
 ![DaLiA_activity_type](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/fe2d51be-879d-4070-8a10-cc7648c4db47)
 
