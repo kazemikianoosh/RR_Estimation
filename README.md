@@ -9,6 +9,10 @@ The goal this project is develop a transfer learning-based method for Respiratio
 Our foundation model architecture includes two major components: 1) Segmentation and Normalization and 2) Multi-Scale Residual CNN. A view of the architecture is illustrated in Figure below. The Segmentation and Normalization are applied to raw PPG and tri-axial ACC before feeding them into the deep learning model. Multi-Scale Residual CNN: To estimate RR, We employ and customize a deep neural network, to derive RR from the signals. This method consists of two distinct modules: a Multi-Scale Residual Convolution module and an RR estimator module.
 
 ![model](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/f0fc2bf8-e183-4c80-a36d-bf58e5974986)
+# Data collection
+We use a dataset obtained as part of a Health Monitoring study to train the model. Participants were instructed to wear Samsung Gear Sport smartwatches on their non-dominant wrists and a Shimmer3 deviceon their chests for continuous 24-hour data collection as shown in Figure below. During data collection, participants were engaged in their typical daily activities to track their vital signs, physical activity and sleep data
+![model2](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/e74a82b4-4b32-491c-9330-a6f6ff170e0c)
+
 
 # Example usage
 Steps to run the example localy:
@@ -18,6 +22,6 @@ Steps to run the example localy:
      This line will import the data and create the data for training and testing phase
 ![DaLiA_activity_type](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/fe2d51be-879d-4070-8a10-cc7648c4db47)
 
-![model2](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/e74a82b4-4b32-491c-9330-a6f6ff170e0c)
+
 
 
