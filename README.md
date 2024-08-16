@@ -8,7 +8,7 @@ The goal this project is develop a transfer learning-based method for Respiratio
 # Model Architecture
 Our foundation model architecture includes two major components: 1) Segmentation and Normalization and 2) Multi-Scale Residual CNN. A view of the architecture is illustrated in Figure below. The Segmentation and Normalization are applied to raw PPG and tri-axial ACC before feeding them into the deep learning model. Multi-Scale Residual CNN: To estimate RR, We employ and customize a deep neural network, to derive RR from the signals. This method consists of two distinct modules: a Multi-Scale Residual Convolution module and an RR estimator module.
 
-![pipeline](https://github.com/user-attachments/assets/325478ff-2cda-41c4-b952-d2a955d4be4b)
+![model](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/f0fc2bf8-e183-4c80-a36d-bf58e5974986)
 
 # Example usage
 Steps to run the example localy:
@@ -19,5 +19,5 @@ Steps to run the example localy:
 ![DaLiA_activity_type](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/fe2d51be-879d-4070-8a10-cc7648c4db47)
 
 ![model2](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/e74a82b4-4b32-491c-9330-a6f6ff170e0c)
-![model](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/f0fc2bf8-e183-4c80-a36d-bf58e5974986)
+
 
