@@ -16,8 +16,15 @@ We use a dataset obtained as part of a Health Monitoring study to train the mode
 
 # Example usage
 Steps to run the example localy:
-  1. download the data file.
-  2. Run sample_code.py
+### Datasets
+
+  1. Install the Requirements Packages
+
+> Run `pip install -r requirements.txt` to install the necessary Python Packages.
+
+  2. [Processed PPG DaLiA and WESAD Dataset](https://drive.google.com/drive/folders/1uQAfajvmxtSCSRP6Ihc_tDlgsITaePBI?usp=drive_link)
+  3. download the data file.
+  24 Run sample_code.py
      *                      train_rr_ref, test_rr_ref, train_sig_raw, test_sig_raw, train_activity_id, test_activity_id = load_data()*              
        - This line will import the data and create the data for training and testing phase
       
