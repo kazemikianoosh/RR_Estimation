@@ -13,6 +13,20 @@ Our foundation model architecture includes two major components: 1) Segmentation
 We use a dataset obtained as part of a Health Monitoring study to train the model. Participants were instructed to wear Samsung Gear Sport smartwatches on their non-dominant wrists and a Shimmer3 deviceon their chests for continuous 24-hour data collection as shown in Figure below. During data collection, participants were engaged in their typical daily activities to track their vital signs, physical activity and sleep data
 ![model2](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/e74a82b4-4b32-491c-9330-a6f6ff170e0c)
 
+## Repository Structure
+```
+.
+├── RR_Estimation
+│   ├── requirements.txt
+│   ├── RR_Estimation_Model.h5
+│   ├── sample_code.py
+│   ├── tf_model.py
+│   ├── data
+│   │   ├── PPG_DaLiA_Annotation.pkl
+│   │   ├── WESAD_Annotation.pkl
+│   │   └── link to the processed PPG DaLiA and WESAD Signals
+│   │       └── (https://drive.google.com/drive/folders/1uQAfajvmxtSCSRP6Ihc_tDlgsITaePBI?usp=drive_link)
+
 
 # Example usage
 Steps to run the example localy:
