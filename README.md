@@ -38,13 +38,18 @@ Steps to run the example localy:
 
   2. [Processed PPG DaLiA and WESAD Dataset](https://drive.google.com/drive/folders/1uQAfajvmxtSCSRP6Ihc_tDlgsITaePBI?usp=drive_link)
   3. download the data file.
-  24 Run sample_code.py
+  4. Run sample_code.py
      *                      train_rr_ref, test_rr_ref, train_sig_raw, test_sig_raw, train_activity_id, test_activity_id = load_data()*              
        - This line will import the data and create the data for training and testing phase
       
          
       *                     train_dataset, test_dataset = create_datasets(train_sig_raw, train_rr_ref, test_sig_raw, test_rr_ref)*              
        - Create the tensor files for feeding the model
+       *          model_input_shape = (2048, 4)  # Example shape: (sequence_length, channels)
+      *           model, loss_fn = create_model(model_input_shape)
+    
+    # Fine-tune the model on the training dataset with validation on the test dataset
+    *              model = FineTuning(model, loss_fn, train_dataset, test_dataset)
     
      
 ![DaLiA_activity_type](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/fe2d51be-879d-4070-8a10-cc7648c4db47)
