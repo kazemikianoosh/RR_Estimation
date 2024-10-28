@@ -25,7 +25,7 @@ from tensorflow.keras.optimizers import Adam
 from tf_model import Multi_class_CNN
 from keras import backend as K
 
-def load_data():
+def load_data(DaLia_WESAD):
     """
     Loads and processes raw PPG signal data and associated annotations.
 
@@ -41,13 +41,21 @@ def load_data():
     - test_activity_id (numpy array): Testing activity IDs (integer)
     """
     # Load raw PPG signal data from a pickle file
-    with open('data/raw_signal.pkl', 'rb') as f:
-        raw_data = pkl.load(f)
-    # Transpose the raw data to match expected input shape (batch, channels, length)
-    raw_data = np.transpose(raw_data, (0, 2, 1))
+    if DaLia_WESAD == 'DaLiA':
+        with open('data/PPG_DaLiA_Raw_Signal.pkl', 'rb') as f:
+            raw_data = pkl.load(f)
+        raw_data = np.transpose(raw_data, (0, 2, 1))
+        annotation = pd.read_pickle('data/PPG_DaLiA_Annotation.pkl')
 
-    # Load annotations, including reference respiration rate and activity ID
-    annotation = pd.read_pickle('data/annotation.pkl')
+    elif DaLia_WESAD == 'WESAD':
+        with open('data/WESAD_Raw_Signal.pkl', 'rb') as f:
+            raw_data = pkl.load(f)
+        raw_data = np.transpose(raw_data, (0, 2, 1))
+        annotation = pd.read_pickle('data/WESAD_Annotation.pkl')
+
+    else:
+        raise ValueError('Please Choose "WESAD" or "DaLiA" Dataset')
+
     reference_rr = annotation['Reference_RR'].values.reshape(-1, 1)
     activity_id = annotation['activity_id'].values.reshape(-1, 1)
 
@@ -250,7 +258,7 @@ def calculate_errors(final_output, ref_rr):
 
 if __name__ == '__main__':
     # Load the training and testing data (signals, reference respiration rate, and activity ID)
-    train_rr_ref, test_rr_ref, train_sig_raw, test_sig_raw, train_activity_id, test_activity_id = load_data()
+    train_rr_ref, test_rr_ref, train_sig_raw, test_sig_raw, train_activity_id, test_activity_id = load_data('WESAD')
 
     # Create TensorFlow datasets for training and testing, with batching and shuffling applied
     train_dataset, test_dataset = create_datasets(train_sig_raw, train_rr_ref, test_sig_raw, test_rr_ref)
