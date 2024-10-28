@@ -55,10 +55,11 @@ Steps to run the example localy:
     
       - Printing the model summary
      *      model.summary()
-    *      print('Mean Absolute Error is:', mae)
-    *      print('Root Mean Square Error is:', rmse)
-    *      print('The length of the Reference RR is', len(ref_rr))
-    *      print('The length of the final output is', len(final_output))
+     *  print('Mean Absolute Error is:', mae)
+     *  print('Root Mean Square Error is:', rmse)
+     *  print('The length of the Reference RR is', len(ref_rr))
+     *  print('The length of the final output is', len(final_output))
+   
 
     
      
