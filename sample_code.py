@@ -44,7 +44,7 @@ def load_data(DaLia_WESAD):
     if DaLia_WESAD == 'DaLiA':
         with open('data/PPG_DaLiA_Raw_Signal.pkl', 'rb') as f:
             raw_data = pkl.load(f)
-        raw_data = np.transpose(raw_data, (0, 2, 1))
+        raw_data = np.transpose(raw_data[:, 1:5, :], (0, 2, 1))
         annotation = pd.read_pickle('data/PPG_DaLiA_Annotation.pkl')
 
     elif DaLia_WESAD == 'WESAD':
