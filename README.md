@@ -47,9 +47,9 @@ Steps to run the example localy:
        - Create the tensor files for feeding the model
        *          model_input_shape = (2048, 4)  # Example shape: (sequence_length, channels)
       *           model, loss_fn = create_model(model_input_shape)
-    
-    # Fine-tune the model on the training dataset with validation on the test dataset
-    *              model = FineTuning(model, loss_fn, train_dataset, test_dataset)
+    - Define model input shape and initialize the model and loss function
+     *               model = FineTuning(model, loss_fn, train_dataset, test_dataset)
+      - Fine-tune the model on the training dataset with validation on the test dataset-
     
      
 ![DaLiA_activity_type](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/fe2d51be-879d-4070-8a10-cc7648c4db47)
