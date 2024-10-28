@@ -53,6 +53,14 @@ Steps to run the example localy:
      
       - Fine-tune the model on the training dataset with validation on the test dataset
     
+      - Printing the model summary
+     *      model.summary()
+    *      print('Mean Absolute Error is:', mae)
+    *      print('Root Mean Square Error is:', rmse)
+    *      print('The length of the Reference RR is', len(ref_rr))
+    *      print('The length of the final output is', len(final_output))
+
+    
      
 ![DaLiA_activity_type](https://github.com/kazemikianoosh/RR_Estimation/assets/51022509/fe2d51be-879d-4070-8a10-cc7648c4db47)
 
