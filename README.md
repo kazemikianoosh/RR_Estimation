@@ -36,9 +36,8 @@ Steps to run the example localy:
 
 > Run `pip install -r requirements.txt` to install the necessary Python Packages.
 
-  2. [Processed PPG DaLiA and WESAD Dataset](https://drive.google.com/drive/folders/1uQAfajvmxtSCSRP6Ihc_tDlgsITaePBI?usp=drive_link)
-  3. download the data file.
-  4. Run sample_code.py
+  2. download the data file[Processed PPG DaLiA and WESAD Dataset](https://drive.google.com/drive/folders/1uQAfajvmxtSCSRP6Ihc_tDlgsITaePBI?usp=drive_link)
+  3. Run sample_code.py
      *                      train_rr_ref, test_rr_ref, train_sig_raw, test_sig_raw, train_activity_id, test_activity_id = load_data()*              
        - This line will import the data and create the data for training and testing phase
       
@@ -47,8 +46,11 @@ Steps to run the example localy:
        - Create the tensor files for feeding the model
        *          model_input_shape = (2048, 4)  # Example shape: (sequence_length, channels)
       *           model, loss_fn = create_model(model_input_shape)
+        
     - Define model input shape and initialize the model and loss function
+    
      *               model = FineTuning(model, loss_fn, train_dataset, test_dataset)
+     
       - Fine-tune the model on the training dataset with validation on the test dataset-
     
      
